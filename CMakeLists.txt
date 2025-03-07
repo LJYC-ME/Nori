@@ -35,10 +35,15 @@ include_directories(
   SYSTEM ${STB_IMAGE_WRITE_INCLUDE_DIR}
 )
 
+# Plug-ins
+set(NORI_PLUGINS_DIR "${PROJECT_SOURCE_DIR}/plugins")
+file(GLOB_RECURSE NORI_PLUGINS "${NORI_PLUGINS_DIR}/*")
+include_directories(${NORI_PLUGINS_DIR})
+
 # The following lines build the main executable. If you add a source
 # code file to Nori, be sure to include it in this list.
 add_executable(nori
-
+  ${NORI_PLUGINS}
   # Header files
   include/nori/bbox.h
   include/nori/bitmap.h

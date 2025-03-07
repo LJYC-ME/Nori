@@ -1,4 +1,7 @@
 /build
+/.idea
+/cmake-build-debug-ninja--llvm19
+/cmake-build-release
 .DS_Store
 /nori
 /warptest
